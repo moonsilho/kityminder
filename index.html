@@ -43,16 +43,9 @@
 
             loadingAnimate(true);
 
-            fio.user.check().then(function(user) {
-                if (user) {
-                    window.location.href = 'edit.html';
-                }
-                else {
-                    $a.fadeIn(800);
-                    loadingAnimate(false);
-                }
-            });
-            
+            $a.fadeIn(800);
+            loadingAnimate(false);
+
             $('p.login a').click(function() {
                 var urlparts = window.location.href.split('/');
                 urlparts.pop();
@@ -294,11 +287,4 @@
     </p>
 </body>
 
-<!--Baidu Tongji Code-->
-<script type="text/javascript">
-if (document.domain == 'naotu.baidu.com') {
-    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0703917f224067c887f3664479a03887' type='text/javascript'%3E%3C/script%3E"));
-}
-</script>
 </html>
